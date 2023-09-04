@@ -9,5 +9,17 @@ console.log(`Number of categories: ${numbersOfCategories.length}`)
 //     console.log(`Elements: ${categoryElements}`)
 // })
 
-numbersOfCategories.forEach(category => console.log(`Category: ${category.querySelector('h2').textContent}
-Elements: ${category.querySelectorAll('li').length}`))
+// numbersOfCategories.forEach(category => console.log(`Category: ${category.querySelector('h2').textContent}
+// Elements: ${category.querySelectorAll('li').length}`))
+
+// WITHOUT 3X querySelector 
+
+// numbersOfCategories.forEach(category => {
+//     console.log(`
+//     Category: ${category.firstElementChild.textContent}
+//     Elements: ${category.lastElementChild.childElementCount}
+//     `)
+// })
+
+numbersOfCategories.forEach(category => console.log(`Category: ${category.firstElementChild.textContent}
+Elements: ${category.lastElementChild.childElementCount}`))
